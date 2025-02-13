@@ -1,7 +1,6 @@
 const express = require("express");
 const connectDB = require("./config/db");
 const user = require("./routes/user");
-const abc = require("./routes/abc");
 const cors = require("cors");
 
 const app = express();
@@ -14,7 +13,7 @@ connectDB()
 
 // middleware
  app.use(cors());
- app.use(express.json());  // ✅ This line enables parsing JSON requests
+ app.use(express.json()); 
 
 // routes
 // app.use("/", user);
